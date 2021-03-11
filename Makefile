@@ -1,0 +1,2 @@
+transcription:
+	python main.py
