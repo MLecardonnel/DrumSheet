@@ -49,7 +49,7 @@ class DrumAudio():
     transcription['KD'] = 0
     transcription['SD'] = 0
 
-    os.makedirs('../data/predictions')
+    os.makedirs('data/predictions')
     for index, row in transcription.iterrows():
       fig, ax = plt.subplots(figsize=(8, 8))
       if row['index_position']<1024:
@@ -58,10 +58,10 @@ class DrumAudio():
         _, _, _, _ = ax.specgram(self.signal[int(row['index_position'])-1024:int(row['index_position'])+4096+1024], Fs=self.freq_rate, scale_by_freq=True)
       ax.axis('tight')
       ax.axis('off')
-      fig.savefig(f'../data/predictions/{index}.png', bbox_inches='tight', pad_inches=0.0)
+      fig.savefig(f'data/predictions/{index}.png', bbox_inches='tight', pad_inches=0.0)
       plt.close(fig)
       img = tf.keras.preprocessing.image.load_img(
-        f'../data/predictions/{index}.png', target_size=(100, 100)
+        f'data/predictions/{index}.png', target_size=(100, 100)
       )
       img_array = tf.keras.preprocessing.image.img_to_array(img)
       img_array = tf.expand_dims(img_array, 0)
@@ -70,7 +70,7 @@ class DrumAudio():
       transcription.loc[index, 'KD'] = int(KD_model.predict(img_array)[0] > 0.5)
       transcription.loc[index, 'SD'] = int(SD_model.predict(img_array)[0] > 0.5)
 
-    shutil.rmtree('../data/predictions')
+    shutil.rmtree('data/predictions')
 
     transcription = transcription[(transcription['CY']!=0) | (transcription['HH']!=0) | (transcription['KD']!=0) | (transcription['SD']!=0)].reset_index(drop=True)
 
