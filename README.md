@@ -21,6 +21,8 @@ The segmentation of the drum audio wav files is done by detecting the percussion
 
 ## Classification method
 
+As several strokes can occure at the same time on different parts of the drums, I choosed to create a model for each following part : cymbal, hi-hat, kick drum, snare drum. The models are binary classifiers that indicates whether or not the drum part is strike given a spectrogram. Thus each spectrogram goes through all the models to predict which drums parts are strike.
+
 |Models       | Well detected percussions | Wrongly detected percussions |
 | ----------- |:-------------------------:|:----------------------------:|
 |CY_60epochs  | 69.7%                     | 2.4%                         |
@@ -28,6 +30,8 @@ The segmentation of the drum audio wav files is done by detecting the percussion
 |KD_ResNet    | 94.8%                     | 0.5%                         |
 |SD_ResNet    | 93.4%                     | 2.6%                         |
 |**AVERAGE**  | **87.8%**                 | **1.95%**                    |
+
+I used the ResNet50V2 model for the hi-hat, the kick drum and the snare drum classifiers as it gave me great performances. However I kept my simple convolutional neural network for the cymbal because the ResNet increased the percentage of wrongly detected percussions despite well increasing the percentage of well detected percussions.
 
 ## Drum audio transcription
 
