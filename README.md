@@ -21,7 +21,7 @@ The segmentation of the drum audio wav files is done by detecting the percussion
 
 ## Classification method
 
-As several strokes can occure at the same time on different parts of the drums, I choosed to create a model for each following part : cymbal, hi-hat, kick drum, snare drum. The models are binary classifiers that indicates whether or not the drum part is strike given a spectrogram. Bellow are the performance results on the validation dataset : 
+As several strokes can occure at the same time on different parts of the drums, I choosed to create a model for each following part : cymbal, hi-hat, kick drum, snare drum. The models are binary classifiers that indicates whether or not the drum part is struck given a spectrogram. Bellow are the performance results on the validation dataset : 
 
 |Models       | Well detected percussions | Wrongly detected percussions |
 | ----------- |:-------------------------:|:----------------------------:|
@@ -35,7 +35,7 @@ I used the ResNet50V2 model for the hi-hat, the kick drum and the snare drum cla
 
 ## Drum audio transcription
 
-From a given drum audio wav file, the tool processes the segmentation of the signal where it detects strokes and then transforms the segments into spectrograms. Each spectrogram goes through all the models to predict which drums parts are strike. It then returns the times of the different strokes with a one hot encoding indicating the types of percussions. Bellow is an example for the 80sRock track from the MedleyDB dataset :
+From a given drum audio wav file, the tool processes the segmentation of the signal where it detects strokes and then transforms the segments into spectrograms. Each spectrogram goes through all the models to predict which drums parts are struck. It then returns the times of the different strokes with a one hot encoding indicating the types of percussions. Bellow is an example for the 80sRock track from the MedleyDB dataset :
 
 ![transcription](https://github.com/MLecardonnel/DrumSheet/blob/main/reports/figures/transcription.PNG?raw=true)
 
