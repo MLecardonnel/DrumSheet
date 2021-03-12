@@ -21,7 +21,7 @@ The segmentation of the drum audio wav files is done by detecting the percussion
 
 ## Classification method
 
-As several strokes can occure at the same time on different parts of the drums, I choosed to create a model for each following part : cymbal, hi-hat, kick drum, snare drum. The models are binary classifiers that indicates whether or not the drum part is struck given a spectrogram. Bellow are the performance results on the validation dataset : 
+As several strokes can occur at the same time on different parts of the drums, I choosed to create a model for each following part : cymbal, hi-hat, kick drum, snare drum. The models are binary classifiers that indicates whether or not the drum part is struck given a spectrogram. Bellow are the performance results on the validation dataset : 
 
 |Models       | Well detected percussions | Wrongly detected percussions |
 | ----------- |:-------------------------:|:----------------------------:|
