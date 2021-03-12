@@ -13,6 +13,9 @@ It consists of drum annotations and audio files for 23 tracks. For each of the t
 
 The audio and annotation files are published under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
+## Audio segmentation process
+
+## Classification method
 
 |Models       | Well detected percussions | Wrongly detected percussions |
 | ----------- |:-------------------------:|:----------------------------:|
@@ -22,7 +25,11 @@ The audio and annotation files are published under a [Creative Commons Attributi
 |SD_ResNet    | 93.4%                     | 2.6%                         |
 |**AVERAGE**  | **87.8%**                 | **1.95%**                    |
 
+## Drum audio transcription
+
 ![transcription](https://github.com/MLecardonnel/DrumSheet/blob/main/reports/figures/transcription.PNG?raw=true)
+
+## Future improvements
 
 ## References
 
