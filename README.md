@@ -15,6 +15,10 @@ The audio and annotation files are published under a [Creative Commons Attributi
 
 ## Audio segmentation process
 
+The segmentation of the drum audio wav files is done by detecting the percussions. Threshold values are chosen for the signal amplitudes to detect where are the percussions. With a defined window size, the signal segments are transformed into spectrograms. The spectrograms give an image representation of the percussions on which we can perform image recognition :
+
+![logo](https://github.com/MLecardonnel/DrumSheet/blob/main/reports/figures/KD_0_MusicDelta_80sRock.png?raw=true)
+
 ## Classification method
 
 |Models       | Well detected percussions | Wrongly detected percussions |
