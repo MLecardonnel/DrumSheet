@@ -7,7 +7,7 @@ The goal of the DrumSheet project is to create a tool that returns the drumming 
 
 ## Dataset
 
-To create the classification models I used the annoted MedleyDB dataset. 
+To create the classification models I used the annoted [MedleyDB](http://medleydb.weebly.com/) dataset. 
 
 It consists of drum annotations and audio files for 23 tracks. For each of the tracks drum only, full mix and the original multi-track wav files are included. Two annotation files are provided for each track. I choosed to work with the first annotation file that groups the 7994 onsets into 6 classes based on drum instrument.
 
