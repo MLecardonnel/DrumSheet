@@ -31,6 +31,8 @@ The audio and annotation files are published under a [Creative Commons Attributi
 
 ## Future improvements
 
+The next step is to learn how to use [Lilypond](http://lilypond.org/) to generate the drumming score sheets.
+
 ## References
 
 | **[1]** |                  **[C. Southall, C. Wu, A. Lerch, J. Hockman, MDB Drums - An Annotated Subset of MedleyDB for Automatic Drum Transcription, Proceedings of the 18th International Society for Music Information Retrieval Conference (ISMIR), 2017.](https://carlsouthall.files.wordpress.com/2017/12/ismir2017mdbdrums.pdf)**|
