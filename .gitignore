@@ -1,2 +1,3 @@
 *.wav
 *.data-00000-of-00001
+__pycache__

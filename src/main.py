@@ -20,10 +20,12 @@ SD_model = load_model('models/SD_ResNet')
 
 @click.command()
 @click.argument('file_name', default='data/drums_audio/MusicDelta_80sRock_Drum.wav')
-def get_transcription(file_name):
+@click.argument('music_title', default=None)
+def get_transcription(file_name, music_title):
     audio = DrumAudio(file_name)
     transcription = audio.predict_kits(CY_model,HH_model,KD_model,SD_model)
-    return transcription
+    audio.get_lilypond_transcription(transcription, music_title)
+    audio.get_pdf_transcription()
 
 if __name__ == '__main__':
     get_transcription()

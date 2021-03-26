@@ -17,7 +17,7 @@ The audio and annotation files are published under a [Creative Commons Attributi
 
 The segmentation of the drum audio wav files is done by detecting the percussions. Threshold values are chosen for the signal amplitudes to detect where are the percussions. With a defined window size, the signal segments are transformed into spectrograms. The spectrograms give an image representation of the percussions on which we can perform image recognition. Bellow is the spectrogram of a kick drum stroke :
 
-![logo](https://github.com/MLecardonnel/DrumSheet/blob/main/reports/figures/KD_0_MusicDelta_80sRock.png?raw=true)
+![KD](https://github.com/MLecardonnel/DrumSheet/blob/main/reports/figures/KD_0_MusicDelta_80sRock.png?raw=true)
 
 ## Classification method
 
@@ -39,9 +39,15 @@ From a given drum audio wav file, the tool processes the segmentation of the sig
 
 ![transcription](https://github.com/MLecardonnel/DrumSheet/blob/main/reports/figures/transcription.PNG?raw=true)
 
+## Score sheet generation
+
+I use [Lilypond](http://lilypond.org/) to generate the drumming score sheets. First I create .ly files that I convert using the Lilypond application to get the pdf score sheets. Bellow is the score sheet for the 80sRock track from the MedleyDB dataset :
+
+![score](https://github.com/MLecardonnel/DrumSheet/blob/main/reports/figures/score_sheet_example.PNG?raw=true)
+
 ## Future improvements
 
-The next step is to learn how to use [Lilypond](http://lilypond.org/) to generate the drumming score sheets.
+Improve the classification models for better performances.
 
 ## References
 
